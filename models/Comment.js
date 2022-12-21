@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize')
-const User = require('./User')
-const Recipe = require('./Recipe')
+const sequelize = require('../config/connection')
 
 class Comment extends Model { }
 
@@ -36,7 +35,7 @@ Comment.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'comment',
     }
 )
 
