@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
-const User = require('./User')
 
 class Recipe extends Model { }
 
@@ -10,24 +9,24 @@ Recipe.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
+            autoIncrement: true
         },
         name: {
             type: DataTypes.STRING,
             allowNull: false
         },
         instructions: {
-            id: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.STRING,
+            allowNull: false
         },
         ingredients: {
-            type: DataTypes.ARRAY(DataTypes.STRING),
-            allowNull: false,
+            type: DataTypes.STRING,
+            allowNull: false
         },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: User,
+                model: 'user',
                 key: 'id'
             }
         }
