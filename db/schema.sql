@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS FoodReviews_db;
+CREATE DATABASE FoodReviews_db;
