@@ -1,0 +1,14 @@
+[
+    {
+        "recipe_id": 1,
+        "ingredients_id": 1
+    },
+    {
+        "recipe_id": 1,
+        "ingredients_id": 2
+    },
+    {
+        "recipe_id": 1,
+        "ingredients_id": 3
+    }
+]
