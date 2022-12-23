@@ -10,26 +10,22 @@ const { User, Recipe, Ingredient, RecipeIngredient } = require('../models')
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
+  await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
   for (const recipe of seedRecipe) {
-    Recipe.create({
+    await Recipe.create({
       ...recipe,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      user_id: 1,
     })
   }
 
-  Ingredient.bulkCreate(seedIngredient, {
-    individualHooks: true,
-    returning: true
+  await Ingredient.bulkCreate(seedIngredient, {
   })
   
-  RecipeIngredient.bulkCreate({
-    individualHooks: true,
-    returning: true,
+  await RecipeIngredient.bulkCreate({recipeIngredient
   })
 
   process.exit(0);
