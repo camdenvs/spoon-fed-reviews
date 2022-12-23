@@ -19,12 +19,9 @@ Recipe.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        ingredient_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'ingredient',
-                key: 'id'
-            }
+        ingredients: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         user_id: {
             type: DataTypes.INTEGER,
