@@ -3,20 +3,35 @@ const sequelize = require('../config/connection');
 const userData = require('./userData.json');
 const seedRecipe = require("./recipeData.json");
 const seedIngredient = require("./ingredientData.json");
-const RecipeIngredient = require("./recipe-ingredient.json");
+const recipeIngredient = require("./recipe-ingredients.json");
+
+const { User, Recipe, Ingredient, RecipeIngredient } = require('../models')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
+  const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  await seedRecipe();
+  for (const recipe of seedRecipe) {
+    Recipe.create({
+      ...recipe,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    })
+  }
 
-  await seedIngredient(); 
+  Ingredient.bulkCreate(seedIngredient, {
+    individualHooks: true,
+    returning: true
+  })
   
+  RecipeIngredient.bulkCreate({
+    individualHooks: true,
+    returning: true,
+  })
+
   process.exit(0);
 };
 
