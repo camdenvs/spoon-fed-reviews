@@ -5,26 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spoonfed Reviews</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <div>
     <header>
-      <h1>
-        <a href="/">Spoon-fed Reviews</a>
+      <h1 class="title is-1">
+        <a href="/">Spoon-Fed Reviews</a>
       </h1>
-      <nav>
-        {{#if logged_in}}
-        <a href="/profile">My Recipes</a>
-        <a href="/">All Recipes</a>
-        <a href="/newrecipe">Add New Recipe</a> 
-        <a href="/review">My Reviews</a>
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
 
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        {{#if logged_in}}
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="/profile" class="navbar-item">
+              My Recipes
+            </a>
+            <a href="/" class="navbar-item">
+              All Recipes
+            </a>
+            <a href="/newrecipe" class="navbar-item">
+              Add New Recipe
+            </a>
+            <a href="/review" class="navbar-item">
+              My Reviews
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a id="logout" class="button is-primary">
+                  <strong>Logout</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{else}}
+        <a href="/login" class="button is-primary">
+          <strong>Login</strong>
+        </a>
+        {{/if}}
       </nav>
     </header>
     <main>
