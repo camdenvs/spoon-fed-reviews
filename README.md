@@ -1,17 +1,15 @@
-# spoon-fed-reviews
+# Spoon-fed-reviews
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+Link to Github Repo:
+Link to deployed website:
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Our project is called "Spoon-Fed Reviews" which is a website dedicated to sharing and reviewing websites created by users. As a user, you are able to create a login and profile, where you can then write and upload recipes. Your recipes are stored in your profile and can be viewed by other users. Other users may comment on to "review" your recipe, as well as up-vote or down-vote the recipe. The user has access to a compiled list of their recipes, as well as a list of their past reviews on other's recipes. The user may also search recipes based on ingredients or category to find a well-reviewed recipe they want to try.
 
-## Table of Contents (Optional)
+Our team learned a lot, and got comfortable building the models, using sequelize, building our routes for the get, post, put and delete requests, and building a smooth UI.
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -20,35 +18,39 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+1. We started by building our folder system in the standardized fashion.
+
+2. We then created the necessary models, and routes, then seeded some data for testing.
+
+3. We then set up our handlebars for all the different pages.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+1. Start by creating a login, you must enter an email and a password.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+2. To create your own recipe, select "Create new recipe" and follow the prompts to add the title, ingredients and instructions, then "Post Recipe."
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+3. To search for a recipe, go to the search bar and type in an ingredient or keyword for what you're looking for.
+
+4. You will be presented with a list of recipe, when selected, you can leave a comment on the recipe as a "review." Click "Post Review."
+
+5. Navigate back to your profile and you will see your list of recipes and list of reviews saved to your profile.
+
+
+![alt text](assets/images/screenshot.png)
+
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Collaborators: Bee, Margaret Delaney, Camden Van Sciver
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+MIT License
 
 ## Badges
+
+npm, mysql, sequelize, nodejs, express
 
 ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
