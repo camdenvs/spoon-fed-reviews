@@ -1,20 +1,32 @@
 <div>
     <form>
-        <div>
-            <label for="recipe-name">What is the name of your recipe?</label>
-            <input class="form-input" type="text" id="recipe-name" />
+        <div class="field">
+            <label class="label">What is the name of your recipe?</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Text input">
+            </div>
         </div>
-        <div>
-            <label for="ing-list">Please list your ingredients:</label>
-            <input class="form-input" type="text" id="ing-list" />
+
+        <div class="field">
+            <label class="label">Please list your ingredients:</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Textarea"></textarea>
+            </div>
         </div>
-        <div>
-            <label for="recipe-inst">Please write out the instructions to your recipe:</label>
-            <input class="form-input" type="text" id="recipe-inst" />
+
+        <div class="field">
+            <label class="label">Please write out the instructions to your recipe:</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Textarea"></textarea>
+            </div>
         </div>
-        <div>
-            <button>Create Recipe!</button>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link">Submit</button>
+            </div>
         </div>
+
     </form>
 </div>
 
