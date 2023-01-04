@@ -36,6 +36,9 @@ router.get('/recipe/:id', async (req, res) => {
                     model: User,
                     attributes: ['name'],
                 },
+                {
+                    model: Comment
+                }
             ],
         });
 
