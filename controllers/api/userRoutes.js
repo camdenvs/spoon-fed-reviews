@@ -57,6 +57,26 @@ router.post('/login', async (req, res) => {
       res.status(404).end();
     }
   });
+
+  //Delete users
+  router.delete("/user/:id", withAuth,(req, res) => {
+    User.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(userData => {
+      if (!userData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(userData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
   
   module.exports = router;
   
