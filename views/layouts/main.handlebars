@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body class="col-lg-12 justify-content-center align-items-center">
@@ -16,10 +17,17 @@
       <h1 class="title is-1">
         <a href="/">Spoon-Fed Reviews</a>
       </h1>
-
+      {{!-- --}}
       <nav class="navbar" role="navigation" aria-label="main navigation">
         {{#if logged_in}}
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navMenu" class="navbar-menu">
           <div class="navbar-start">
             <a href="/profile" class="navbar-item">
               My Recipes
@@ -45,6 +53,7 @@
             </div>
           </div>
         </div>
+
         {{else}}
         <a href="/login" class="button is-primary">
           <strong>Login</strong>
@@ -60,6 +69,7 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
