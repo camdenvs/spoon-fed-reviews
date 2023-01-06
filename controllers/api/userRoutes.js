@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.post('/', async (req, res) => {
     try {
@@ -58,7 +59,7 @@ router.post('/login', async (req, res) => {
     }
   });
 
-  //Delete users
+
   router.delete("/user/:id", (req, res) => {
     User.destroy({
       where: {
