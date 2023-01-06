@@ -1,0 +1,14 @@
+<!--for users to see their comments-->
+
+<div class="content">
+     {{#if comments.length}}
+    <h2>All My Reviews on Other /Recipes</h2>
+
+    {{#each comments as |comment| }}
+    <div class="content">
+      <h2>Review for <a href='/recipe/{{recipe.id}}'>{{name}}</a></h2>
+      <p>{{text}}</p>
+    </div>
+    {{/each}}
+    {{/if}}
+</div>
