@@ -2,18 +2,20 @@
 {{#each recipes as |recipe| }}
 <div>
   <div>
-    <h2>
+    <h2><b>RECIPE: </b>
       <a href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
     </h2>
     <p>Created by {{recipe.user.name}}</p>
   </div>
   <div>
+    <b>INGREDIENTS: </b>
     <p>
-      {{recipe.instructions}}
+      <pre>{{recipe.ingredients}}</pre>
     </p>
+    <b>INSTRUCTIONS: </b>
     <p>
-      {{recipe.ingredients}}
-    </p>
+      <pre>{{recipe.instructions}}</pre>
+    </p> 
   </div>
 </div>
 {{/each}}
