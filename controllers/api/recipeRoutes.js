@@ -33,7 +33,7 @@ router.put('/:id', withAuth, async (req, res) => {
 //Delete recipe
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-        const recipeData = await Recipe.update(req.body, {
+        const recipeData = await Recipe.destroy({
             where: {
                 id: req.params.id
               }
@@ -43,32 +43,6 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-//Get all recipes
-router.get('/', async (req, res) => {
-    try {
-        const recipeData = await Recipe.findAll({
-            //...req.body
-            attributes: ['id', 'name', 'instructions', 'ingredients']
-        })
-        res.status(200).json(recipeData)
-    } catch (err) {
-        res.status(400).json(err)
-    }
-})
-
-//Get single recipe
-router.get('/:id', withAuth, async (req, res) => {
-    try {
-        const recipeData = await Recipe.findByPk(req.params.id, {
-            ...req.body
-        });
-        res.status(200).json(recipeData)
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
 
 
 module.exports = router
