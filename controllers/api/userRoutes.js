@@ -59,8 +59,8 @@ router.post('/login', async (req, res) => {
     }
   });
 
-  //Delete users
-  router.delete("/user/:id", withAuth, (req, res) => {
+
+  router.delete("/user/:id", (req, res) => {
     User.destroy({
       where: {
         id: req.params.id

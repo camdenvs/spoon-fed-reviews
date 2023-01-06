@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 const userData = require('./userData.json');
 const seedRecipe = require("./recipeData.json");
 
+// const config = require("../config/config.json5");
+
 const { User, Recipe } = require('../models')
 
 const seedDatabase = async () => {
@@ -13,6 +15,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  // const json5Recipe = json5.parse(seedRecipe);
   for (const recipe of seedRecipe) {
     await Recipe.create({
       ...recipe,
