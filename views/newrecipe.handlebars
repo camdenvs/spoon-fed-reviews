@@ -1,33 +1,33 @@
 <div>
-    <form>
+    <form class="new-recipe-form">
         <div class="field">
             <label class="label">What is the name of your recipe?</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="text" placeholder="Text input" id="recipe-name">
             </div>
         </div>
 
         <div class="field">
             <label class="label">Please list your ingredients:</label>
             <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
+                <textarea class="textarea" placeholder="Textarea" id="ing-list"></textarea>
             </div>
         </div>
 
         <div class="field">
             <label class="label">Please write out the instructions to your recipe:</label>
             <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
+                <textarea class="textarea" placeholder="Textarea" id="recipe-inst"></textarea>
             </div>
         </div>
 
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-link">Submit</button>
+                <button class="button is-link" type="submit">Submit</button>
             </div>
         </div>
 
     </form>
 </div>
 
-<!--will need it's own javascript-->
+<script src="./js/newrecipe.js"></script>

@@ -1,23 +1,23 @@
 const router = require('express').Router();
-const { Recipe, Comment } = require('../../models');
+const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //Add new recipe
 router.post('/', withAuth, async (req, res) => {
     try {
         const newRecipe = await Recipe.create({
-            ...req.body
-            ,user_id: req.session.user_id
-        })
-
-        res.status(200).json(newRecipe)
+            ...req.body,
+            user_id: req.session.user_id,
+        });
+        
+        res.status(200).json(newRecipe);
     } catch (err) {
-        res.status(400).json(err)
+        res.status(400).json(err);
     }
 })
 
 //Update recipe
-router.put('/:id',withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     try {
         const recipeData = await Recipe.update(req.body, {
             where: {
@@ -31,7 +31,7 @@ router.put('/:id',withAuth, async (req, res) => {
 });
 
 //Delete recipe
-router.delete('/:id',withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     try {
         const recipeData = await Recipe.update(req.body, {
             where: {
@@ -45,7 +45,7 @@ router.delete('/:id',withAuth, async (req, res) => {
 });
 
 //Get all recipes
-router.get('/',  async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const recipeData = await Recipe.findAll({
             //...req.body
@@ -58,7 +58,7 @@ router.get('/',  async (req, res) => {
 })
 
 //Get single recipe
-router.get('/:id',withAuth, async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
         const recipeData = await Recipe.findByPk(req.params.id, {
             ...req.body
