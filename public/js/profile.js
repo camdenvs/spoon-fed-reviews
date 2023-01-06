@@ -15,10 +15,6 @@ const delButtonHandler = async (event) => {
   };
   
   document
-    .querySelector('.new-recipe-form')
-    .addEventListener('submit', newFormHandler);
-  
-  document
     .querySelector('.recipe-list')
     .addEventListener('click', delButtonHandler);
   

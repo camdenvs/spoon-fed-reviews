@@ -20,6 +20,10 @@ Recipe.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
+Recipe.hasMany(Comment, {
+    foreignKey: 'recipe_id'
+})
+
 Comment.belongsTo(User, {
     foreignKey: 'user_id'
 })
