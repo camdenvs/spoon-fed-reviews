@@ -1,12 +1,21 @@
 <!--when people select a specific recipe to look at-->
-<div class="content">
+<div>
   <div>
     <h2>{{name}}</h2>
   </div>
   <div>
-    <p>{{instructions}}</p>
+    <b>Ingredients: </b>
+    <p>
+      <pre>{{ingredients}}</pre>
+    </p>
+    <b>Instructions: </b>
+    <p>
+      <pre>{{instructions}}</pre>
+    </p> 
+    <p><b>Created by: </b> {{user.name}}</p>
+    {{!-- <p>{{instructions}}</p>
     <p>{{ingredients}}</p>
-    <p>Created by {{user.name}}</p>
+    <p>Created by {{user.name}}</p> --}}
 
     <div>
       <form class="field" id="new-comment-form" data-id="{{id}}">
