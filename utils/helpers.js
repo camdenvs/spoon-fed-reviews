@@ -1,3 +1,7 @@
-import { formatDistance, subDays } from 'date-fns'
+const { formatDistance } = require('date-fns') 
 
-formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true })
+module.exports = {
+  format_date: (date) => {
+    return formatDistance( date, new Date(), {addSuffix: true})
+  }
+}

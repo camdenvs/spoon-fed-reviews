@@ -12,7 +12,7 @@
     <p>
     <pre>{{instructions}}</pre>
     </p>
-    <p><b>Created by: </b> {{user.name}} {{recipe.date_posted}}</p>
+    <p><b>Created by: </b> {{user.name}}, {{format_date date_posted}}</p>
     <hr>
 
     <div>
@@ -40,7 +40,7 @@
     </div>
     {{#each comments as |comment| }}
     <div class="box">
-      <b>Review by: {{user.name}}</b>
+      <b>Review by: {{user.name}}, {{format_date date_posted}}</b>
       <p>{{text}}</p>
     </div>
     {{/each}}
