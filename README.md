@@ -49,14 +49,14 @@ Our team learned a lot, and got comfortable building the models, using sequelize
 
 ## Credits
 
-Collaborators: Bee, Margaret Delaney, Camden Van Sciver
-npm
-mysql
-sequelize
-nodejs
-express
-handlebars
-date-fns
+- Collaborators: Bee, Margaret Delaney, Camden Van Sciver
+- npm
+- mysql
+- sequelize
+- nodejs
+- express
+- handlebars
+- date-fns
 
 ## License
 
