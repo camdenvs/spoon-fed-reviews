@@ -1,8 +1,7 @@
 <!-- will hold ALL recipes from all users-->
 {{#each recipes as |recipe| }}
 <div >
-  <div>
-    <hr>
+  <div> 
     <h2><b>Recipe: </b>
       <a href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
     </h2>
@@ -18,5 +17,6 @@
       <pre>{{recipe.instructions}}</pre>
     </p> 
   </div>
+  <hr>
 </div>
 {{/each}}
