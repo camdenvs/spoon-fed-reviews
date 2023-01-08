@@ -29,6 +29,11 @@ Recipe.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        date_posted: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW
         }
     },
     {
