@@ -2,18 +2,20 @@ const User = require('./User')
 const Recipe = require('./Recipe')
 const Comment = require('./Comment')
 const Favorite = require('./Favorite')
-// const Saved = require('./Saved')
 
 User.hasMany(Recipe, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 })
 
 User.hasMany(Comment, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 })
 
 User.hasMany(Favorite, {
     foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 })
 
 Recipe.belongsTo(User, {
@@ -21,7 +23,8 @@ Recipe.belongsTo(User, {
 })
 
 Recipe.hasMany(Comment, {
-    foreignKey: 'recipe_id'
+    foreignKey: 'recipe_id',
+    onDelete: 'CASCADE'
 })
 
 Comment.belongsTo(User, {
@@ -56,7 +59,8 @@ Favorite.belongsTo(User, {
 // })
 
 User.hasMany(Comment, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 })
 
 Comment.belongsTo(User, {
