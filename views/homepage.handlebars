@@ -2,12 +2,13 @@
 {{#each recipes as |recipe| }}
 <div >
   <div>
+    <hr>
     <h2><b>Recipe: </b>
       <a href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
     </h2>
     <p><b>Created by: </b> {{recipe.user.name}} {{recipe.date_posted}}</p>
   </div>
-  <div >
+  <div class="box">
     <b>Ingredients: </b>
     <p>
       <pre>{{recipe.ingredients}}</pre>
