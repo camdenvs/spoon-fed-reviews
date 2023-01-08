@@ -6,16 +6,13 @@
   <div>
     <b>Ingredients: </b>
     <p>
-      <pre>{{ingredients}}</pre>
+    <pre>{{ingredients}}</pre>
     </p>
     <b>Instructions: </b>
     <p>
-      <pre>{{instructions}}</pre>
-    </p> 
-    <p><b>Created by: </b> {{user.name}}</p>
-    {{!-- <p>{{instructions}}</p>
-    <p>{{ingredients}}</p>
-    <p>Created by {{user.name}}</p> --}}
+    <pre>{{instructions}}</pre>
+    </p>
+    <p><b>Created by: </b> {{recipe.user.name}} {{recipe.date_posted}}</p>
 
     <div>
       <form class="field" id="new-comment-form" data-id="{{id}}">
