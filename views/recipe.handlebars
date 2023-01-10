@@ -31,13 +31,14 @@
       </form>
     </div>
     {{else}}
+    <p>Login to comment</p>
+    {{/if}}
     {{#each comments as |comment| }}
     <div class="box">
       <b>Review by: {{user.name}}, {{format_date date_posted}}</b>
       <p>{{text}}</p>
     </div>
     {{/each}}
-    {{/if}}
   </div>
 </div>
 
