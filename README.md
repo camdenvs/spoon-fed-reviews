@@ -2,7 +2,7 @@
 
 ## Description
 
-Link to Github Repo: https://github.com/FarmFreshYeets/spoon-fed-reviews
+Link to Github Repo: https://github.com/camdenvs/spoon-fed-reviews
 Link to deployed website: https://spoon-fed-reviews.herokuapp.com/
 
 Our project is called "Spoon-Fed Reviews" which is a website dedicated to sharing and reviewing websites created by users. As a user, you are able to create a login and profile, where you can then write and upload recipes. Your recipes are stored in your profile and can be viewed by other users. Other users may comment on to "review" your recipe, as well as up-vote the recipe. The user has access to a compiled list of their recipes.
